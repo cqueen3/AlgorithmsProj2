@@ -32,5 +32,3 @@ def merge(left, right):
         result.extend(right[right_idx:])
     return result
 
-a = [1, 5634, 34, 3, 6, 4, 6745, 234 ,34, 6,2 ,456]
-print(MergeSort(a))

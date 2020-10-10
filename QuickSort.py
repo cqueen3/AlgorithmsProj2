@@ -28,5 +28,3 @@ def QuickSort(a):
     return a
 
 
-a = [1, 5634, 34, 3, 6, 4, 6745, 234 ,34, 6,2 ,456]
-print(QuickSort(a))

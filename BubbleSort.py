@@ -8,6 +8,3 @@ def BubbleSort(myList): # Bubble Sort Algorithm
                            myList[j + 1], myList[j]
     return myList
 
-a = [7, 3, 56, 5, 122, 4, 1]
-
-print(BubbleSort(a))

@@ -5,11 +5,11 @@ from QuickSort import *
 from SelectionSort import *
 import time
 
-def BubbleSortAverage():
+def BubbleSortAverage(r):
     Time1 = 0
     Time2 = 0
     Time3 = 0
-    for i in range(30):
+    for i in range(1):
         F1,B1,R1 = randomLists()
         start1 = time.time()
         #Best Case Already Sorted
@@ -27,20 +27,20 @@ def BubbleSortAverage():
         end3 = time.time()
         Time3 +=(end3-start3)
         
-    FinalT1=Time1/30
-    FinalT2=Time2/30
-    FinalT3=Time3/30
+    FinalT1=Time1/r
+    FinalT2=Time2/r
+    FinalT3=Time3/r
     print("BubbleSort")
     print("Best Case Average Time:    ",FinalT1)
     print("Average Case Average Time: ", FinalT3)
     print("Worst Case Average Time:   ", FinalT2)
 
 
-def MergeSortAverage():
+def MergeSortAverage(r):
     Time1 = 0
     Time2 = 0
     Time3 = 0
-    for i in range(30):
+    for i in range(1):
         #order of list does not change run time 
         F1,B1,R1 = randomLists()
         start1 = time.time()
@@ -56,9 +56,9 @@ def MergeSortAverage():
         end3 = time.time()
         Time3 +=(end3-start3)
         
-    FinalT1=Time1/30
-    FinalT2=Time2/30
-    FinalT3=Time3/30
+    FinalT1=Time1/r
+    FinalT2=Time2/r
+    FinalT3=Time3/r
     print()
     print("MergeSort")
     print("Order Does not effect time of MergeSort")
@@ -68,11 +68,11 @@ def MergeSortAverage():
        
 
 
-def SelectionSortAverage():
+def SelectionSortAverage(r):
     Time1 = 0
     Time2 = 0
     Time3 = 0
-    for i in range(30):
+    for i in range(1):
         #order of list does not change run time 
         F1,B1,R1 = randomLists()
         start1 = time.time()
@@ -89,9 +89,9 @@ def SelectionSortAverage():
         Time3 +=(end3-start3)
 
         
-    FinalT1=Time1/30
-    FinalT2=Time2/30
-    FinalT3=Time3/30
+    FinalT1=Time1/r
+    FinalT2=Time2/r
+    FinalT3=Time3/r
     print()
     print("SelectionSort")
     print("Order Does not effect time of SelectionSort")
@@ -100,14 +100,15 @@ def SelectionSortAverage():
     print("WorstCase Backwards Sorted List Average Time: ", FinalT2)
 
 
-def QuickSortAverage():
+def QuickSortAverage(r):
     Time1 = 0
     Time3 = 0
-    for i in range(30):
+    for i in range(1):
         F1,B1,R1 = randomLists()
         start1 = time.time()
         #Worst Case
-        F = QuickSort(F1)
+        #F = QuickSort(F1)
+        F = quickSortIterative(F1,0,4999)
         end1 = time.time()
         Time1 +=(end1-start1)
         start3 = time.time()
@@ -117,8 +118,8 @@ def QuickSortAverage():
         Time3 +=(end3-start3)
 
         
-    FinalT1=Time1/30
-    FinalT3=Time3/30
+    FinalT1=Time1/r
+    FinalT3=Time3/r
     print()
     print("QuickSort")
     print("Unsorted is BestCase Average Time:     ",FinalT3)
@@ -128,7 +129,7 @@ def QuickSortAverage():
 
 
 
-BubbleSortAverage()
-MergeSortAverage()
-SelectionSortAverage()
-QuickSortAverage()
+BubbleSortAverage(3)
+MergeSortAverage(3)
+SelectionSortAverage(3)
+QuickSortAverage(3)
